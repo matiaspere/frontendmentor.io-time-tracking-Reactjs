@@ -1,0 +1,75 @@
+/* Contenedor principal */
+.Container{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    max-width: 230px;
+    overflow: hidden;
+
+}
+
+/* Contenedor de color */
+.ColorContainer img{
+    display: inline-block;
+    object-fit: contain;
+    position: absolute;
+    right: 20px;
+    top: -5px;
+}
+.ColorContainer{
+    color: hsl(236, 100%, 87%);
+    width: 230px;
+    height: 50px;
+    border-radius: 12px 12px 0 0;
+}
+.Work{
+    background-color: hsl(15, 100%, 70%);
+}
+.Play{
+    background-color: hsl(195, 74%, 62%);
+}
+.Study{
+    background-color: hsl(348, 100%, 68%);
+}
+.Exercise{
+    background-color: hsl(145, 58%, 55%);
+}
+.Social{
+    background-color: hsl(264, 64%, 52%);
+}
+.SelfCare{
+    background-color: hsl(43, 84%, 65%);
+}
+
+/* Contenedor de datos */
+.DataContainer{
+    width: 230px;
+    height: 180px;
+    border-radius: 12px;
+    background-color: hsl(235, 46%, 20%);
+    color: hsl(236, 100%, 87%);
+    position: absolute;
+    top: 39px;
+    
+}
+.DataContainer-header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    font-weight: 500;
+    font-size: 16px;
+}
+.DataContainer-body{
+    display: flex;
+    flex-direction: column;
+    padding: 0 20px;
+}
+.CurrentTime{
+    font-size: 60px;
+}
+.PreviousTime{
+    font-size: 14px;
+    font-weight: 400;
+}
