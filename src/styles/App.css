@@ -1,9 +1,21 @@
-*{
-  font-family: 'Rubik', sans-serif;
+* {
+  font-family: "Rubik", sans-serif;
   margin: 0;
   padding: 0;
 }
-.CardsGrid{
+.App-Container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: hsl(226, 43%, 10%);
+}
+.App {
+  display: flex;
+  flex: row;
+  gap: 20px;
+}
+.CardsGrid {
   display: grid;
   grid-template-columns: repeat(3, 230px);
   grid-template-rows: 220px 220px;
@@ -11,6 +23,73 @@
   gap: 20px;
   /* width: 1000px; */
 }
-.ProfileContainer{
-  
+.ProfileContainer {
+  border-radius: 12px;
+  width: 260px;
+  z-index: 1;
+  position: relative;
+}
+.ProfileContainer img {
+  width: 80px;
+  height: 80px;
+  place-self: center;
+}
+.image-container {
+  margin-left: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  width: 40px;
+  height: 40px;
+  border: 2px solid white;
+  border-radius: 50%;
+}
+.name-container {
+  padding: 30px;
+  margin-top: 0px;
+  color: hsl(236, 100%, 87%);
+}
+.Report {
+  font-weight: 300;
+}
+.Name {
+  font-weight: 400;
+  font-size: 45px;
+}
+.selector-container {
+  border-radius: 12px;
+  background-color: hsl(235, 46%, 20%);
+  color: hsl(235, 45%, 61%);
+  border-radius: 12px;
+  max-width: 260px;
+  height: 120px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  font-weight: 500;
+}
+.selector-container p:hover{
+  color: hsl(236, 100%, 87%);
+}
+.selector-container p{
+  cursor: pointer;
+}
+.up{
+  z-index: 20;
+  background-color: hsl(246, 80%, 60%);
+  border-radius: 12px;
+  height: 290px;
+  padding-top: 20px;
+}
+.selector-container{
+  z-index: -1;
+  position: absolute;
+  top: 280px;
+  width: 220px;
+  height: 140px;
+}
+.selector-container p:nth-child(1){
+  margin-top: 20px;
 }

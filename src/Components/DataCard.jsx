@@ -9,7 +9,8 @@ import imgSocial from "../images/icon-social.svg";
 import imgSelfCare from "../images/icon-self-care.svg";
 import options from '../images/icon-ellipsis.svg';
 
-const DataCard = ({ title, timeframes }) => {
+const DataCard = (props) => {
+  const { title, timeframes, daily, weekly, monthly, handleDaily, handleWeekly, handleMonthly } = props
   let clase = `ColorContainer ${title}`;
   if (title === "Self Care") {
     clase = "ColorContainer SelfCare";
@@ -32,6 +33,22 @@ const DataCard = ({ title, timeframes }) => {
 
   return (
     <div className="Container">
+      {daily && <>
+      <div className={clase}>
+        <img src={image} />
+      </div>
+      <div className="DataContainer">
+          <div className="DataContainer-header">
+            <p>{title}</p>
+            <img src={options}/>
+          </div>
+          <div className="DataContainer-body">
+            <p className="CurrentTime">{timeframes.daily.current}hrs</p>
+            <p className="PreviousTime">Last week - {timeframes.daily.previous}hrs</p>
+          </div>
+      </div>
+      </>}
+      {weekly && <>
       <div className={clase}>
         <img src={image} />
       </div>
@@ -42,10 +59,27 @@ const DataCard = ({ title, timeframes }) => {
           </div>
           <div className="DataContainer-body">
             <p className="CurrentTime">{timeframes.weekly.current}hrs</p>
-            <p className="PreviousTime">Last week - {timeframes.weekly.previous}</p>
+            <p className="PreviousTime">Last week - {timeframes.weekly.previous}hrs</p>
           </div>
       </div>
+      </>}
+      {monthly && <>
+      <div className={clase}>
+        <img src={image} />
+      </div>
+      <div className="DataContainer">
+          <div className="DataContainer-header">
+            <p>{title}</p>
+            <img src={options}/>
+          </div>
+          <div className="DataContainer-body">
+            <p className="CurrentTime">{timeframes.monthly.current}hrs</p>
+            <p className="PreviousTime">Last week - {timeframes.monthly.previous}hrs</p>
+          </div>
+      </div>
+      </>}
     </div>
+    
   );
 };
 
