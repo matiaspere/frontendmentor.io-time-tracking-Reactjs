@@ -36,7 +36,7 @@ function App() {
             </div>
             <div className="name-container">
               <p className="Report">Report by</p>
-              <p className="Name">Jeremy Robson</p>
+              <p className="Name">Matias Peressutti</p>
             </div>
           </div>
           <div className="down">
